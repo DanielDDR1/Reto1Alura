@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es-co">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de mensajes</title>
+    <link rel="stylesheet" href="./Styles/Styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&
+    family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <img src="./assets/imagenes/Vector.png" alt="logo alura encabezado">
+    </header>
+    <main>
+        <form class="form_contenedor">
+           <!-- <textarea class="entrada_texto" name="texto"  cols="30" rows="10" placeholder="Ingrese el texto a encriptar aqui"> </textarea> -->
+            <textarea class="entrada_texto" name="texto" cols="30" rows="10" placeholder="Ingrese el texto a codificar aqui"></textarea>
+            <div   class="btn_container">
+                <div class="alert_mensaje"><img src="./assets/imagenes/signo de exclamacion.png" alt="alerta icono">
+                    <span>solo letras minusculas sin acento</span>
+                </div>
+            </div>
+            <div class="entrega_container">
+                <input class="btn_encriptar" type="submit" value="Encriptar">
+                <input class="btn_encriptar btn_encriptar--desencriptar" type="submit" value="Desencriptar">
+            </div>
+        </form>
+        <aside class="msj2"> <!-- se encuentra el muñeco en el campo del msj desencriptado -->
+            <!--<img src="./assets/imagenes/Muñeco.png" alt="imagen muneco" class="msj_muneco">-->
+            <img src="./assets/imagenes/Muñeco.png" alt="imagen del muñeco" class="msj_muneco">
+            <div class="loader hidden"></div>
+            <div class="mjs2_contenedor">
+                <h3 class="titulo_msj2"> Ningún mensaje fue encontrado</h3>
+                <p class="parrafo_msj2">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <button class="btn_copiar btn_encriptar btn_encriptar--desencriptar hidden">Copiar</button>
+            </div>      
+        </aside>
+    </main>
+    <script src="./encriptador.js"></script>
+
+    <footer class="footer">
+        <p>Desarrollado por Daniel Duarte</p>
+    </footer>
+
+</body>
+</html>

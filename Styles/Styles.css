@@ -1,0 +1,179 @@
+:root{
+    --dark-blue:#0A3871;
+    --ligth-blue: #D8DFE8;
+    --main-color: #f3f5fc;
+    --inter-font: "Inter", sans-serif;
+    
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color: var(--main-color);
+    font-family:var(--inter-font);
+
+}
+header{
+    margin-bottom: 5rem;
+    width: 60%;
+}
+
+header img{
+    width: 80px;
+    height: 48px;
+}
+main {
+    display: flex;
+    justify-content: space-around;
+    
+}
+.form_contenedor{
+    display:flex ;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70dvh;
+}
+.entrada_texto{
+    width: 100%;
+    max-width: 577px;
+    border-color: transparent;
+    height: 64dvh;
+    background: transparent;
+    font-family:var(--inter-font);
+    font-size: 3.2rem; 
+    color: var(--dark-blue);
+    margin-bottom: 3rem;
+    overflow: auto;
+    
+}
+
+::placeholder {
+    color: var(--dark-blue);
+
+} 
+.alert_mensaje{
+    display:flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.entrega_container{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.btn_encriptar{
+    background:var(--dark-blue);
+    color: white;
+    font-size: 1.6rem;
+    padding: 1rem  2rem;
+    width: 328px;
+    height: 67px;   
+    border-radius: 24px;
+    border: 1px solid var(--dark-blue);
+    font-weight: 600;
+}
+.btn_encriptar--desencriptar{
+    background: transparent;
+    color: var(--dark-blue);
+
+}
+.msj2{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    height: 92dvh;
+    border-radius: 32px;
+    max-width: 40rem;
+    width: 100%;
+    padding: 2rem 3rem;
+
+}
+.titulo_msj2{
+    font-size: 2.4rem;
+    font-weight: 600;
+    color:#343A40;
+}
+.parrafo_msj2{
+    font-size: 1.6rem;
+}
+.msj_muneco{
+    display: block;
+}
+
+.hidden{
+    display: none;
+}
+
+.footer{
+    background-color:var(--dark-blue);
+    padding: 12px;
+    color: white;
+    text-align: center;
+    font-family: var(--inter-font);
+    font-size: 2rem;
+    font-weight: 200px;
+}
+
+
+@media screen and (max-width:768px)   {
+   main {
+    flex-direction: column;
+   }
+   .entrega_container{
+    justify-content: center;
+   }
+   .msj2{
+    height: auto;
+    max-width: 624px;
+    margin-top: 2rem;
+    min-height: 186px;
+
+   }
+   .msj_muneco{
+    display: none;
+    }
+    header img {
+        width: 73px;
+    } 
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 80px;
+    height: 40px;
+    color: #000;
+    border: 2px solid currentColor;
+    border-right-color: transparent;
+    padding: 3px;
+    background: 
+      repeating-linear-gradient(90deg,currentColor 0 10px,#0000 0 15px) 
+      0/0% no-repeat content-box content-box;
+    position: relative;
+    box-sizing: border-box;
+    animation: l5 2s infinite steps(6);
+  }
+  .loader::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: 100%;
+    width: 10px;
+    background:
+      linear-gradient(
+          #0000   calc(50% - 14px),currentColor 0 calc(50% - 10px),
+          #0000 0 calc(50% + 10px),currentColor 0 calc(50% + 14px),#0000 0) left /100% 100%,
+      linear-gradient(currentColor calc(50% - 10px),#0000        0 calc(50% + 10px),currentColor 0) left /4px 100%,
+      linear-gradient(#0000        calc(50% - 10px),currentColor 0 calc(50% + 10px),#0000        0) right/4px 100%;
+    background-repeat:no-repeat;
+  }
+  @keyframes l5 {
+      100% {background-size:120%}
+  }
